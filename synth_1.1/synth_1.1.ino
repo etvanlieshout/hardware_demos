@@ -19,7 +19,7 @@ void loop() {
 			if (!synthVoice[sv_i].isPlaying()
 			     && keys[(sv_i + 1) % 3] != i
 			     && keys[(sv_i + 2) % 3] != i){
-				synthVoice[sv_i].play(NOTE_C3);
+				synthVoice[sv_i].play(notes[i]);
 				keys[sv_i] = i;
 				sv_i = ++sv_i % 3;
 			}
