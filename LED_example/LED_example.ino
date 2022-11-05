@@ -1,14 +1,14 @@
-
+/* re-written to use pins D2 - D10 on the Arduino Nano */
 // some global vars
-int i = 0;
-int j = 0;
+int i = 2;
+int j = 2;
 
 void setup() {
   // put your setup code here, to run once:
-  for (int s = 0; s < 8; ++s){
+  for (int s = 2; s < 10; ++s){
     pinMode(s, OUTPUT);
   }
-  pinMode(8, INPUT);
+  pinMode(10, INPUT);
 }
 
 void loop() {
@@ -21,10 +21,10 @@ void loop() {
     digitalWrite(i, LOW ); // turn the LED back off
   }
 
-  if (digitalRead(8) == 1) {
-    j = 4;
+  if (digitalRead(10) == 1) {
+    j = 6;
   }
   else {
-    j = 0;
+    j = 2;
   }
 }
